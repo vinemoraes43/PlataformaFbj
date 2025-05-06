@@ -1,0 +1,14 @@
+C:\Users\jpdur\Desktop\PlataformaFbj\bin\Debug\net8.0\PlataformaFbj.exe
+C:\Users\jpdur\Desktop\PlataformaFbj\bin\Debug\net8.0\PlataformaFbj.deps.json
+C:\Users\jpdur\Desktop\PlataformaFbj\bin\Debug\net8.0\PlataformaFbj.runtimeconfig.json
+C:\Users\jpdur\Desktop\PlataformaFbj\bin\Debug\net8.0\PlataformaFbj.dll
+C:\Users\jpdur\Desktop\PlataformaFbj\bin\Debug\net8.0\PlataformaFbj.pdb
+C:\Users\jpdur\Desktop\PlataformaFbj\obj\Debug\net8.0\PlataformaFbj.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\jpdur\Desktop\PlataformaFbj\obj\Debug\net8.0\PlataformaFbj.AssemblyInfoInputs.cache
+C:\Users\jpdur\Desktop\PlataformaFbj\obj\Debug\net8.0\PlataformaFbj.AssemblyInfo.cs
+C:\Users\jpdur\Desktop\PlataformaFbj\obj\Debug\net8.0\PlataformaFbj.csproj.CoreCompileInputs.cache
+C:\Users\jpdur\Desktop\PlataformaFbj\obj\Debug\net8.0\PlataformaFbj.dll
+C:\Users\jpdur\Desktop\PlataformaFbj\obj\Debug\net8.0\refint\PlataformaFbj.dll
+C:\Users\jpdur\Desktop\PlataformaFbj\obj\Debug\net8.0\PlataformaFbj.pdb
+C:\Users\jpdur\Desktop\PlataformaFbj\obj\Debug\net8.0\PlataformaFbj.genruntimeconfig.cache
+C:\Users\jpdur\Desktop\PlataformaFbj\obj\Debug\net8.0\ref\PlataformaFbj.dll
