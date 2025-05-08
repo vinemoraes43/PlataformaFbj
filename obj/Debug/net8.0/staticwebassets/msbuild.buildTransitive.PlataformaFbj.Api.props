@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\buildMultiTargeting\PlataformaFbj.Api.props" />
+</Project>
