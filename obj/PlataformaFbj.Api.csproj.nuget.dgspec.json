@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\vinem\\Documents\\Faculdade Coisas\\Pratica casa\\C-sharp\\PlataformaFbj\\PlataformaFbj.Api.csproj": {}
+    "C:\\Users\\jpdur\\Desktop\\PlataformaFbj\\PlataformaFbj.Api.csproj": {}
   },
   "projects": {
-    "C:\\Users\\vinem\\Documents\\Faculdade Coisas\\Pratica casa\\C-sharp\\PlataformaFbj\\PlataformaFbj.Api.csproj": {
+    "C:\\Users\\jpdur\\Desktop\\PlataformaFbj\\PlataformaFbj.Api.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\vinem\\Documents\\Faculdade Coisas\\Pratica casa\\C-sharp\\PlataformaFbj\\PlataformaFbj.Api.csproj",
+        "projectUniqueName": "C:\\Users\\jpdur\\Desktop\\PlataformaFbj\\PlataformaFbj.Api.csproj",
         "projectName": "PlataformaFbj.Api",
-        "projectPath": "C:\\Users\\vinem\\Documents\\Faculdade Coisas\\Pratica casa\\C-sharp\\PlataformaFbj\\PlataformaFbj.Api.csproj",
-        "packagesPath": "C:\\Users\\vinem\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\vinem\\Documents\\Faculdade Coisas\\Pratica casa\\C-sharp\\PlataformaFbj\\obj\\",
+        "projectPath": "C:\\Users\\jpdur\\Desktop\\PlataformaFbj\\PlataformaFbj.Api.csproj",
+        "packagesPath": "C:\\Users\\jpdur\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\jpdur\\Desktop\\PlataformaFbj\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\vinem\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\jpdur\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
@@ -91,7 +91,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.406/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.401/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
