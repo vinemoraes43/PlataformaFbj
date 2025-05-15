@@ -1,5 +1,6 @@
 using System;
 using Microsoft.EntityFrameworkCore;
+using PlataformaFbj.Data;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -9,9 +10,8 @@ builder.Services.AddSwaggerGen();
 builder.Services.AddDbContext<AppDbContext>(options =>
     options.UseMySql(
         builder.Configuration.GetConnectionString("DefaultConnection"),
-        new MySqlServerVersion(new Version(8, 0, 40))
-    )
-);
+        ServerVersion.AutoDetect(builder.Configuration.GetConnectionString("DefaultConnection"))
+    ));
 
 var app = builder.Build();
 

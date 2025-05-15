@@ -1,20 +1,18 @@
 using Microsoft.EntityFrameworkCore;
 using PlataformaFbj.Models;
 
-namespace PlataformaFbj.Data // Adicione o namespace apropriado
+namespace PlataformaFbj.Data
 {
     public class AppDbContext : DbContext
     {
         public AppDbContext(DbContextOptions<AppDbContext> options) : base(options) { }
 
-        // DbSets para todas as entidades
         public DbSet<Usuario> Usuarios { get; set; }
         public DbSet<Jogo> Jogos { get; set; }
         public DbSet<Feedback> Feedbacks { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            // Configuração das relações
             modelBuilder.Entity<Feedback>(entity =>
             {
                 // Relação com Usuário
@@ -33,7 +31,7 @@ namespace PlataformaFbj.Data // Adicione o namespace apropriado
             // Configurações adicionais (opcional)
             modelBuilder.Entity<Jogo>(entity =>
             {
-                entity.Property(j => j.Titulo)
+                entity.Property(j => j.Nome)
                     .IsRequired()
                     .HasMaxLength(100);
             });

@@ -1,18 +1,30 @@
-namespace PlataformaFbj.Models 
-{
-    // Models/Feedback.cs
-public class Feedback
-{
-    public int Id { get; set; }
-    public string Comentario { get; set; }
-    public int Avaliacao { get; set; } // Ex: 1 a 5 estrelas
-    public DateTime DataPublicacao { get; set; }
+using System.ComponentModel.DataAnnotations;
 
-    // Relação: Um feedback pertence a um usuário e a um jogo
-    public int UsuarioId { get; set; }
-    public Usuario Usuario { get; set; }
+namespace PlataformaFbj.Models
+{
+    public class Feedback
+    {
+        public int Id { get; set; }
 
-    public int JogoId { get; set; }
-    public Jogo Jogo { get; set; }
-}
+        // Relacionamentos (obrigatórios)
+        [Required]
+        public int JogoId { get; set; }
+        public Jogo Jogo { get; set; }
+
+        [Required]
+        public int UsuarioId { get; set; }
+        public Usuario Usuario { get; set; }
+
+        // Dados do feedback
+        [Required]
+        [Range(1, 5, ErrorMessage = "A nota deve ser entre 1 e 5 estrelas.")]
+        public int Nota { get; set; }  // Nome mais claro que "Avaliacao"
+
+        [Required]
+        [StringLength(500, ErrorMessage = "O comentário não pode ultrapassar 500 caracteres.")]
+        public string Comentario { get; set; }
+
+        [DataType(DataType.DateTime)]
+        public DateTime DataPublicacao { get; set; } = DateTime.Now; // Valor padrão: data atual
+    }
 }

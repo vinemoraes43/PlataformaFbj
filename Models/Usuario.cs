@@ -1,16 +1,27 @@
-// Models/Usuario.cs
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+using PlataformaFbj.Enums;
 
 namespace PlataformaFbj.Models
 {
     public class Usuario
     {
         public int Id { get; set; }
-        public string Nome { get; set; }
-        public string Email { get; set; }
-        public string Senha { get; set; }
 
-        // Propriedade de navegação para os feedbacks do usuário
-        public ICollection<Feedback> Feedbacks { get; set; }
+        [Required]
+        public string Nome { get; set; }
+
+        [Required, EmailAddress]
+        public string Email { get; set; }
+
+        [Required]
+        public string SenhaHash { get; set; }
+
+        [Required]
+        [EnumDataType(typeof(TipoUsuario))]
+        public TipoUsuario Role { get; set; }
+
+        // Relacionamento 1:N com Feedback (um usuário tem muitos feedbacks)
+        public ICollection<Feedback> Feedbacks { get; set; } = new HashSet<Feedback>();
     }
 }
