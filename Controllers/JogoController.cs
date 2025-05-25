@@ -101,7 +101,7 @@ namespace PlataformaFbj.Controllers
         private async Task<bool> ValidateDesenvolvedor(int desenvolvedorId)
         {
             var desenvolvedor = await _context.Usuarios.FindAsync(desenvolvedorId);
-            return desenvolvedor != null && desenvolvedor.Role == TipoUsuario.Desenvolvedor;
+            return desenvolvedor != null && desenvolvedor.Tipo == TipoUsuario.Desenvolvedor;
         }
     }
 }

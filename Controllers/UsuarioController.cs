@@ -30,7 +30,7 @@ namespace PlataformaFbj.Controllers
                     Id = u.Id,
                     Nome = u.Nome,
                     Email = u.Email,
-                    Role = u.Role
+                    Tipo = u.Tipo
                 })
                 .ToListAsync();
         }
@@ -44,7 +44,7 @@ namespace PlataformaFbj.Controllers
                     Id = u.Id,
                     Nome = u.Nome,
                     Email = u.Email,
-                    Role = u.Role
+                    Tipo = u.Tipo
                 })
                 .FirstOrDefaultAsync(u => u.Id == id);
 
@@ -83,7 +83,7 @@ namespace PlataformaFbj.Controllers
 
             existingUser.Nome = usuario.Nome;
             existingUser.Email = usuario.Email;
-            existingUser.Role = usuario.Role;
+            existingUser.Tipo = usuario.Tipo;
 
             if (!string.IsNullOrWhiteSpace(usuario.SenhaHash))
                 existingUser.SenhaHash = BCrypt.Net.BCrypt.HashPassword(usuario.SenhaHash);
@@ -110,7 +110,7 @@ namespace PlataformaFbj.Controllers
 
             if (usuario == null) return NotFound();
 
-            if (usuario.Role == TipoUsuario.Desenvolvedor && 
+            if (usuario.Tipo == TipoUsuario.Desenvolvedor && 
                 await _context.Jogos.AnyAsync(j => j.DesenvolvedorId == id))
                 return BadRequest("Desenvolvedor possui jogos cadastrados");
 
@@ -130,7 +130,7 @@ namespace PlataformaFbj.Controllers
                 Id = usuario.Id,
                 Nome = usuario.Nome,
                 Email = usuario.Email,
-                Role = usuario.Role
+                Tipo = usuario.Tipo
             };
     }
 }

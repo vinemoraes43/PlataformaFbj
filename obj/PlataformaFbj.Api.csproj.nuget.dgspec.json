@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\jpdur\\Desktop\\PlataformaFbj\\PlataformaFbj.Api.csproj": {}
+    "C:\\Users\\vinem\\Documents\\Faculdade Coisas\\Pratica casa\\C-sharp\\PlataformaFbj\\PlataformaFbj.Api.csproj": {}
   },
   "projects": {
-    "C:\\Users\\jpdur\\Desktop\\PlataformaFbj\\PlataformaFbj.Api.csproj": {
+    "C:\\Users\\vinem\\Documents\\Faculdade Coisas\\Pratica casa\\C-sharp\\PlataformaFbj\\PlataformaFbj.Api.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\jpdur\\Desktop\\PlataformaFbj\\PlataformaFbj.Api.csproj",
+        "projectUniqueName": "C:\\Users\\vinem\\Documents\\Faculdade Coisas\\Pratica casa\\C-sharp\\PlataformaFbj\\PlataformaFbj.Api.csproj",
         "projectName": "PlataformaFbj.Api",
-        "projectPath": "C:\\Users\\jpdur\\Desktop\\PlataformaFbj\\PlataformaFbj.Api.csproj",
-        "packagesPath": "C:\\Users\\jpdur\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\jpdur\\Desktop\\PlataformaFbj\\obj\\",
+        "projectPath": "C:\\Users\\vinem\\Documents\\Faculdade Coisas\\Pratica casa\\C-sharp\\PlataformaFbj\\PlataformaFbj.Api.csproj",
+        "packagesPath": "C:\\Users\\vinem\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\vinem\\Documents\\Faculdade Coisas\\Pratica casa\\C-sharp\\PlataformaFbj\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\jpdur\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\vinem\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
@@ -47,6 +47,10 @@
               "target": "Package",
               "version": "[4.0.3, )"
             },
+            "Microsoft.AspNetCore.Authentication.JwtBearer": {
+              "target": "Package",
+              "version": "[8.0.5, )"
+            },
             "Microsoft.AspNetCore.OpenApi": {
               "target": "Package",
               "version": "[8.0.13, )"
@@ -74,6 +78,10 @@
             "Swashbuckle.AspNetCore": {
               "target": "Package",
               "version": "[6.6.2, )"
+            },
+            "System.IdentityModel.Tokens.Jwt": {
+              "target": "Package",
+              "version": "[8.10.0, )"
             }
           },
           "imports": [
@@ -95,7 +103,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.401/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.406/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

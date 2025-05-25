@@ -69,7 +69,7 @@ namespace PlataformaFbj.Data
                     .IsRequired()
                     .HasMaxLength(255);
 
-                entity.Property(u => u.Role)
+                entity.Property(u => u.Tipo)
                     .HasConversion<string>()
                     .IsRequired();
 
