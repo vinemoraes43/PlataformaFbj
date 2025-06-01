@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace PlataformaFbj.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("api/Feedbacks")]
     [ApiController]
     public class FeedbackController : ControllerBase
     {

@@ -7,18 +7,21 @@ using BCrypt.Net;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using PlataformaFbj.Service;
 
 namespace PlataformaFbj.Controllers
 {
-    [Route("api/[controller]")]
     [ApiController]
+    [Route("api/usuarios")]
     public class UsuarioController : ControllerBase
     {
         private readonly AppDbContext _context;
+        private readonly AuthService _authService;
 
-        public UsuarioController(AppDbContext context)
+        public UsuarioController(AppDbContext context, AuthService authService)
         {
             _context = context;
+            _authService = authService;
         }
 
         [HttpGet]

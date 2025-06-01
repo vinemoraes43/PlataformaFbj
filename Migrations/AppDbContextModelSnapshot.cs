@@ -117,9 +117,15 @@ namespace PlataformaFbj.Api.Migrations
                         .HasMaxLength(255)
                         .HasColumnType("varchar(255)");
 
+                    b.Property<int>("TentativasLogin")
+                        .HasColumnType("int");
+
                     b.Property<string>("Tipo")
                         .IsRequired()
                         .HasColumnType("longtext");
+
+                    b.Property<DateTime?>("UltimaTentativa")
+                        .HasColumnType("datetime(6)");
 
                     b.HasKey("Id");
 

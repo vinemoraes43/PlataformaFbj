@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace PlataformaFbj.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("api/Jogos")]
     [ApiController]
     public class JogoController : ControllerBase
     {

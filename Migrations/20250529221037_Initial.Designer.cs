@@ -12,8 +12,8 @@ using PlataformaFbj.Data;
 namespace PlataformaFbj.Api.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20250515180349_UptadeModels")]
-    partial class UptadeModels
+    [Migration("20250529221037_Initial")]
+    partial class Initial
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -71,21 +71,24 @@ namespace PlataformaFbj.Api.Migrations
                         .HasColumnType("datetime(6)");
 
                     b.Property<string>("Descricao")
-                        .HasColumnType("longtext");
+                        .HasMaxLength(500)
+                        .HasColumnType("varchar(500)");
 
                     b.Property<int>("DesenvolvedorId")
                         .HasColumnType("int");
 
                     b.Property<string>("Genero")
-                        .HasColumnType("longtext");
+                        .HasMaxLength(50)
+                        .HasColumnType("varchar(50)");
 
                     b.Property<string>("Nome")
                         .IsRequired()
                         .HasMaxLength(100)
                         .HasColumnType("varchar(100)");
 
-                    b.Property<int>("Plataforma")
-                        .HasColumnType("int");
+                    b.Property<string>("Plataforma")
+                        .IsRequired()
+                        .HasColumnType("longtext");
 
                     b.HasKey("Id");
 
@@ -109,16 +112,25 @@ namespace PlataformaFbj.Api.Migrations
 
                     b.Property<string>("Nome")
                         .IsRequired()
-                        .HasColumnType("longtext");
-
-                    b.Property<int>("Role")
-                        .HasColumnType("int");
+                        .HasMaxLength(100)
+                        .HasColumnType("varchar(100)");
 
                     b.Property<string>("SenhaHash")
+                        .IsRequired()
+                        .HasMaxLength(255)
+                        .HasColumnType("varchar(255)");
+
+                    b.Property<int>("TentativasLogin")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Tipo")
                         .IsRequired()
                         .HasColumnType("longtext");
 
                     b.HasKey("Id");
+
+                    b.HasIndex("Email")
+                        .IsUnique();
 
                     b.ToTable("Usuarios");
                 });
@@ -147,7 +159,7 @@ namespace PlataformaFbj.Api.Migrations
                     b.HasOne("PlataformaFbj.Models.Usuario", "Desenvolvedor")
                         .WithMany()
                         .HasForeignKey("DesenvolvedorId")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
 
                     b.Navigation("Desenvolvedor");

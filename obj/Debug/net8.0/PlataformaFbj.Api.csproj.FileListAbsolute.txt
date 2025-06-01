@@ -112,6 +112,9 @@ C:\Users\vinem\Documents\Faculdade Coisas\Pratica casa\C-sharp\PlataformaFbj\Pla
 C:\Users\vinem\Documents\Faculdade Coisas\Pratica casa\C-sharp\PlataformaFbj\PlataformaFbj.Api\bin\Debug\net8.0\zh-Hant\Microsoft.CodeAnalysis.Workspaces.resources.dll
 C:\Users\vinem\Documents\Faculdade Coisas\Pratica casa\C-sharp\PlataformaFbj\bin\Debug\net8.0\appsettings.Development.json
 C:\Users\vinem\Documents\Faculdade Coisas\Pratica casa\C-sharp\PlataformaFbj\bin\Debug\net8.0\appsettings.json
+C:\Users\vinem\Documents\Faculdade Coisas\Pratica casa\C-sharp\PlataformaFbj\bin\Debug\net8.0\plataforma-fbj-frontend\package-lock.json
+C:\Users\vinem\Documents\Faculdade Coisas\Pratica casa\C-sharp\PlataformaFbj\bin\Debug\net8.0\plataforma-fbj-frontend\package.json
+C:\Users\vinem\Documents\Faculdade Coisas\Pratica casa\C-sharp\PlataformaFbj\bin\Debug\net8.0\plataforma-fbj-frontend\tsconfig.json
 C:\Users\vinem\Documents\Faculdade Coisas\Pratica casa\C-sharp\PlataformaFbj\bin\Debug\net8.0\PlataformaFbj.Api.exe
 C:\Users\vinem\Documents\Faculdade Coisas\Pratica casa\C-sharp\PlataformaFbj\bin\Debug\net8.0\PlataformaFbj.Api.deps.json
 C:\Users\vinem\Documents\Faculdade Coisas\Pratica casa\C-sharp\PlataformaFbj\bin\Debug\net8.0\PlataformaFbj.Api.runtimeconfig.json
@@ -119,6 +122,7 @@ C:\Users\vinem\Documents\Faculdade Coisas\Pratica casa\C-sharp\PlataformaFbj\bin
 C:\Users\vinem\Documents\Faculdade Coisas\Pratica casa\C-sharp\PlataformaFbj\bin\Debug\net8.0\PlataformaFbj.Api.pdb
 C:\Users\vinem\Documents\Faculdade Coisas\Pratica casa\C-sharp\PlataformaFbj\bin\Debug\net8.0\BCrypt.Net-Next.dll
 C:\Users\vinem\Documents\Faculdade Coisas\Pratica casa\C-sharp\PlataformaFbj\bin\Debug\net8.0\Humanizer.dll
+C:\Users\vinem\Documents\Faculdade Coisas\Pratica casa\C-sharp\PlataformaFbj\bin\Debug\net8.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
 C:\Users\vinem\Documents\Faculdade Coisas\Pratica casa\C-sharp\PlataformaFbj\bin\Debug\net8.0\Microsoft.AspNetCore.OpenApi.dll
 C:\Users\vinem\Documents\Faculdade Coisas\Pratica casa\C-sharp\PlataformaFbj\bin\Debug\net8.0\Microsoft.Bcl.AsyncInterfaces.dll
 C:\Users\vinem\Documents\Faculdade Coisas\Pratica casa\C-sharp\PlataformaFbj\bin\Debug\net8.0\Microsoft.CodeAnalysis.dll
@@ -136,6 +140,12 @@ C:\Users\vinem\Documents\Faculdade Coisas\Pratica casa\C-sharp\PlataformaFbj\bin
 C:\Users\vinem\Documents\Faculdade Coisas\Pratica casa\C-sharp\PlataformaFbj\bin\Debug\net8.0\Microsoft.Extensions.Logging.dll
 C:\Users\vinem\Documents\Faculdade Coisas\Pratica casa\C-sharp\PlataformaFbj\bin\Debug\net8.0\Microsoft.Extensions.Logging.Abstractions.dll
 C:\Users\vinem\Documents\Faculdade Coisas\Pratica casa\C-sharp\PlataformaFbj\bin\Debug\net8.0\Microsoft.Extensions.Options.dll
+C:\Users\vinem\Documents\Faculdade Coisas\Pratica casa\C-sharp\PlataformaFbj\bin\Debug\net8.0\Microsoft.IdentityModel.Abstractions.dll
+C:\Users\vinem\Documents\Faculdade Coisas\Pratica casa\C-sharp\PlataformaFbj\bin\Debug\net8.0\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\vinem\Documents\Faculdade Coisas\Pratica casa\C-sharp\PlataformaFbj\bin\Debug\net8.0\Microsoft.IdentityModel.Logging.dll
+C:\Users\vinem\Documents\Faculdade Coisas\Pratica casa\C-sharp\PlataformaFbj\bin\Debug\net8.0\Microsoft.IdentityModel.Protocols.dll
+C:\Users\vinem\Documents\Faculdade Coisas\Pratica casa\C-sharp\PlataformaFbj\bin\Debug\net8.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\Users\vinem\Documents\Faculdade Coisas\Pratica casa\C-sharp\PlataformaFbj\bin\Debug\net8.0\Microsoft.IdentityModel.Tokens.dll
 C:\Users\vinem\Documents\Faculdade Coisas\Pratica casa\C-sharp\PlataformaFbj\bin\Debug\net8.0\Microsoft.OpenApi.dll
 C:\Users\vinem\Documents\Faculdade Coisas\Pratica casa\C-sharp\PlataformaFbj\bin\Debug\net8.0\Mono.TextTemplating.dll
 C:\Users\vinem\Documents\Faculdade Coisas\Pratica casa\C-sharp\PlataformaFbj\bin\Debug\net8.0\MySqlConnector.dll
@@ -149,6 +159,7 @@ C:\Users\vinem\Documents\Faculdade Coisas\Pratica casa\C-sharp\PlataformaFbj\bin
 C:\Users\vinem\Documents\Faculdade Coisas\Pratica casa\C-sharp\PlataformaFbj\bin\Debug\net8.0\System.Composition.Hosting.dll
 C:\Users\vinem\Documents\Faculdade Coisas\Pratica casa\C-sharp\PlataformaFbj\bin\Debug\net8.0\System.Composition.Runtime.dll
 C:\Users\vinem\Documents\Faculdade Coisas\Pratica casa\C-sharp\PlataformaFbj\bin\Debug\net8.0\System.Composition.TypedParts.dll
+C:\Users\vinem\Documents\Faculdade Coisas\Pratica casa\C-sharp\PlataformaFbj\bin\Debug\net8.0\System.IdentityModel.Tokens.Jwt.dll
 C:\Users\vinem\Documents\Faculdade Coisas\Pratica casa\C-sharp\PlataformaFbj\bin\Debug\net8.0\cs\Microsoft.CodeAnalysis.resources.dll
 C:\Users\vinem\Documents\Faculdade Coisas\Pratica casa\C-sharp\PlataformaFbj\bin\Debug\net8.0\de\Microsoft.CodeAnalysis.resources.dll
 C:\Users\vinem\Documents\Faculdade Coisas\Pratica casa\C-sharp\PlataformaFbj\bin\Debug\net8.0\es\Microsoft.CodeAnalysis.resources.dll
@@ -223,11 +234,5 @@ C:\Users\vinem\Documents\Faculdade Coisas\Pratica casa\C-sharp\PlataformaFbj\obj
 C:\Users\vinem\Documents\Faculdade Coisas\Pratica casa\C-sharp\PlataformaFbj\obj\Debug\net8.0\PlataformaFbj.Api.pdb
 C:\Users\vinem\Documents\Faculdade Coisas\Pratica casa\C-sharp\PlataformaFbj\obj\Debug\net8.0\PlataformaFbj.Api.genruntimeconfig.cache
 C:\Users\vinem\Documents\Faculdade Coisas\Pratica casa\C-sharp\PlataformaFbj\obj\Debug\net8.0\ref\PlataformaFbj.Api.dll
-C:\Users\vinem\Documents\Faculdade Coisas\Pratica casa\C-sharp\PlataformaFbj\bin\Debug\net8.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
-C:\Users\vinem\Documents\Faculdade Coisas\Pratica casa\C-sharp\PlataformaFbj\bin\Debug\net8.0\Microsoft.IdentityModel.Abstractions.dll
-C:\Users\vinem\Documents\Faculdade Coisas\Pratica casa\C-sharp\PlataformaFbj\bin\Debug\net8.0\Microsoft.IdentityModel.JsonWebTokens.dll
-C:\Users\vinem\Documents\Faculdade Coisas\Pratica casa\C-sharp\PlataformaFbj\bin\Debug\net8.0\Microsoft.IdentityModel.Logging.dll
-C:\Users\vinem\Documents\Faculdade Coisas\Pratica casa\C-sharp\PlataformaFbj\bin\Debug\net8.0\Microsoft.IdentityModel.Protocols.dll
-C:\Users\vinem\Documents\Faculdade Coisas\Pratica casa\C-sharp\PlataformaFbj\bin\Debug\net8.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
-C:\Users\vinem\Documents\Faculdade Coisas\Pratica casa\C-sharp\PlataformaFbj\bin\Debug\net8.0\Microsoft.IdentityModel.Tokens.dll
-C:\Users\vinem\Documents\Faculdade Coisas\Pratica casa\C-sharp\PlataformaFbj\bin\Debug\net8.0\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\vinem\Documents\Faculdade Coisas\Pratica casa\C-sharp\PlataformaFbj\bin\Debug\net8.0\AutoMapper.dll
+C:\Users\vinem\Documents\Faculdade Coisas\Pratica casa\C-sharp\PlataformaFbj\bin\Debug\net8.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll

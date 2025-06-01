@@ -19,9 +19,13 @@ namespace PlataformaFbj.Models
 
         [Required]
         [EnumDataType(typeof(TipoUsuario))]
-        public TipoUsuario Tipo { get; set; }
+        public TipoUsuario Tipo { get; set; } // "Desenvolvedor" ou "BetaTester"
 
         // Relacionamento 1:N com Feedback (um usuário tem muitos feedbacks)
         public ICollection<Feedback> Feedbacks { get; set; } = new HashSet<Feedback>();
+
+        public int TentativasLogin { get; set; } = 0;
+
+        public DateTime? UltimaTentativa { get; set; }
     }
 }

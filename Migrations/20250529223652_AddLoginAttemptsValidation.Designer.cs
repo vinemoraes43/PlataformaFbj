@@ -12,8 +12,8 @@ using PlataformaFbj.Data;
 namespace PlataformaFbj.Api.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20250520000922_RenomeiaRoleParaTipo")]
-    partial class RenomeiaRoleParaTipo
+    [Migration("20250529223652_AddLoginAttemptsValidation")]
+    partial class AddLoginAttemptsValidation
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -120,9 +120,15 @@ namespace PlataformaFbj.Api.Migrations
                         .HasMaxLength(255)
                         .HasColumnType("varchar(255)");
 
+                    b.Property<int>("TentativasLogin")
+                        .HasColumnType("int");
+
                     b.Property<string>("Tipo")
                         .IsRequired()
                         .HasColumnType("longtext");
+
+                    b.Property<DateTime?>("UltimaTentativa")
+                        .HasColumnType("datetime(6)");
 
                     b.HasKey("Id");
 
