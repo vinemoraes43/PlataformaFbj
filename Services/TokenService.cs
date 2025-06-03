@@ -7,7 +7,7 @@ using PlataformaFbj.Models;
 
 namespace PlataformaFbj.Service
 {
-    public class TokenService
+    public class TokenService : ITokenService
     {
         private readonly IConfiguration _config;
 
@@ -21,13 +21,16 @@ namespace PlataformaFbj.Service
             var tokenHandler = new JwtSecurityTokenHandler();
             var key = Encoding.ASCII.GetBytes(_config["Jwt:Secret"]!);
 
+            var claims = new List<Claim>
+            {
+                new Claim(ClaimTypes.Name, usuario.Email),
+                new Claim(ClaimTypes.NameIdentifier, usuario.Id.ToString()),
+                new Claim("Tipo", usuario.Tipo.ToString())
+            };
+
             var tokenDescriptor = new SecurityTokenDescriptor
             {
-                Subject = new ClaimsIdentity(new[]
-                {
-            new Claim(ClaimTypes.Name, usuario.Email),
-            new Claim("Tipo", usuario.Tipo.ToString()) // Convert enum to string
-        }),
+                Subject = new ClaimsIdentity(claims),
                 Expires = DateTime.UtcNow.AddHours(_config.GetValue<double>("Jwt:ExpireHours")),
                 SigningCredentials = new SigningCredentials(
                     new SymmetricSecurityKey(key),

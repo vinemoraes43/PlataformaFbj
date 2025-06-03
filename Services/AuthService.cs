@@ -3,17 +3,16 @@ using Microsoft.EntityFrameworkCore;
 using PlataformaFbj.Data;
 using PlataformaFbj.Enums;
 using PlataformaFbj.Models;
-
 using PlataformaFbj.Dto.Auth.Requests;
 
 namespace PlataformaFbj.Service
 {
-    public class AuthService
+    public class AuthService : IAuthService
     {
         private readonly AppDbContext _context;
-        private readonly TokenService _tokenService;
+        private readonly ITokenService _tokenService;
 
-        public AuthService(AppDbContext context, TokenService tokenService)
+        public AuthService(AppDbContext context, ITokenService tokenService)
         {
             _context = context;
             _tokenService = tokenService;
@@ -56,7 +55,6 @@ namespace PlataformaFbj.Service
         public async Task<string> Login(LoginRequestDto dto)
         {
             var usuario = await Authenticate(dto.Email, dto.Senha);
-
             await AplicarDelaySeNecessario(dto.Email);
 
             if (usuario == null || !BCrypt.Net.BCrypt.Verify(dto.Senha, usuario.SenhaHash))
@@ -67,14 +65,14 @@ namespace PlataformaFbj.Service
                     usuario.UltimaTentativa = DateTime.UtcNow;
                     await _context.SaveChangesAsync();
                 }
+                throw new Exception("Credenciais inválidas");
             }
 
             usuario.TentativasLogin = 0;
-            
             await _context.SaveChangesAsync();
+
             return _tokenService.GenerateToken(usuario);
         }
-
 
         public async Task AplicarDelaySeNecessario(string email)
         {
@@ -83,8 +81,7 @@ namespace PlataformaFbj.Service
 
             if (usuario?.TentativasLogin >= 3)
             {
-                // Aumenta o delay progressivamente: 2s, 4s, 6s...
-                int delaySegundos = Math.Min(usuario.TentativasLogin * 2, 10); // Máximo 10s
+                int delaySegundos = Math.Min(usuario.TentativasLogin * 2, 10);
                 await Task.Delay(delaySegundos * 1000);
             }
         }

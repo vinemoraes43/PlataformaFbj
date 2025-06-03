@@ -10,23 +10,20 @@ namespace PlataformaFbj.Mapping
     {
         public AutoMapperProfile()
         {
-            // Auth
+            // Mapeamentos para Registro
             CreateMap<RegisterRequestDto, Usuario>()
                 .ForMember(dest => dest.SenhaHash, opt => opt.Ignore())
                 .ForMember(dest => dest.Tipo, opt => opt.MapFrom(src => Enum.Parse<TipoUsuario>(src.Tipo)));
 
-            // Usuários
-            //CreateMap<Usuario, UsuarioResponseDto>();
-            //CreateMap<UsuarioCreateDto, Usuario>()
-                //.ForMember(dest => dest.SenhaHash, opt => opt.Ignore());
+            CreateMap<Usuario, RegistrationResponse>()
+                .ForMember(dest => dest.Token, opt => opt.Ignore());
 
-            // Jogos
-            //CreateMap<Jogo, JogoResponseDto>();
-            //CreateMap<JogoCreateDto, Jogo>();
+            // Mapeamentos para Login
+            CreateMap<Usuario, LoginResponse>()
+                .ForMember(dest => dest.Token, opt => opt.Ignore()); 
 
-            // Feedbacks
-            //CreateMap<Feedback, FeedbackResponseDto>();
-            //CreateMap<FeedbackCreateDto, Feedback>();
+            // Mapeamentos adicionais que você pode precisar
+            CreateMap<LoginRequestDto, Usuario>().ReverseMap();
         }
     }
 }

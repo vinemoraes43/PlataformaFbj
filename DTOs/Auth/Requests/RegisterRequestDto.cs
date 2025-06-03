@@ -7,12 +7,17 @@ namespace PlataformaFbj.Dto.Auth.Requests
     public class RegisterRequestDto : LoginRequestDto
     {
         [Required(ErrorMessage = "O campo Nome é obrigatório")]
-        [StringLength(100, MinimumLength = 3, 
+        [StringLength(100, MinimumLength = 3,
             ErrorMessage = "O nome deve ter entre 3 e 100 caracteres")]
         public string Nome { get; set; }
 
+        [Required(ErrorMessage = "O campo Email é obrigatório")]
+        [EmailAddress(ErrorMessage = "Formato de email inválido")]
+        [StringLength(100, ErrorMessage = "O email não pode exceder {1} caracteres")]
+        public new string Email { get; set; }
+
         [Required(ErrorMessage = "O campo Tipo é obrigatório")]
-        [EnumDataType(typeof(TipoUsuario), 
+        [EnumDataType(typeof(TipoUsuario),
             ErrorMessage = "Tipo de usuário inválido. Valores aceitos: Desenvolvedor, BetaTester")]
         public string Tipo { get; set; }
 

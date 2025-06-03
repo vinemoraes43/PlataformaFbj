@@ -52,8 +52,8 @@ builder.Services.AddDbContext<AppDbContext>(options =>
 
 // SEÇÃO 4: REGISTRO DE SERVIÇOS PERSONALIZADOS
 
-builder.Services.AddScoped<TokenService>();
-builder.Services.AddScoped<AuthService>();
+builder.Services.AddScoped<ITokenService, TokenService>();
+builder.Services.AddScoped<IAuthService, AuthService>();
 
 var app = builder.Build();
 
