@@ -1,4 +1,4 @@
-namespace PlataformaFbj.Dto.Auth.Responses
+namespace PlataformaFbj.Dto
 {
     public class ErrorResponse
     {

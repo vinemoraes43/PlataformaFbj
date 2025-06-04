@@ -40,6 +40,7 @@ builder.Services.AddAuthorization(options =>
 {
     options.AddPolicy("Desenvolvedor", policy => policy.RequireClaim("Tipo", "Desenvolvedor"));
     options.AddPolicy("BetaTester", policy => policy.RequireClaim("Tipo", "BetaTester"));
+    options.AddPolicy("Admin", policy => policy.RequireClaim("Tipo", "Admin"));
 });
 
 // SEÇÃO 3: CONFIGURAÇÃO DO BANCO DE DADOS

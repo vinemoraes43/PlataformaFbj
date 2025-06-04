@@ -6,6 +6,7 @@ using PlataformaFbj.Dto.Auth.Requests;
 using PlataformaFbj.Dto.Auth.Responses;
 using PlataformaFbj.Models;
 using PlataformaFbj.Filters;
+using PlataformaFbj.Dto;
 
 [ApiController]
 [Route("api/auth")]

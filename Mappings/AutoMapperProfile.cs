@@ -1,6 +1,8 @@
 using AutoMapper;
 using PlataformaFbj.Dto.Auth.Requests;
 using PlataformaFbj.Dto.Auth.Responses;
+using PlataformaFbj.Dto.Usuarios.Requests;
+using PlataformaFbj.Dto.Usuarios.Responses;
 using PlataformaFbj.Enums;
 using PlataformaFbj.Models;
 
@@ -20,10 +22,22 @@ namespace PlataformaFbj.Mapping
 
             // Mapeamentos para Login
             CreateMap<Usuario, LoginResponse>()
-                .ForMember(dest => dest.Token, opt => opt.Ignore()); 
+                .ForMember(dest => dest.Token, opt => opt.Ignore());
 
-            // Mapeamentos adicionais que você pode precisar
-            CreateMap<LoginRequestDto, Usuario>().ReverseMap();
+            // Mapeamentos para Usuário
+            // Mapeamento para criação de usuário
+            CreateMap<UsuarioCreateDto, Usuario>()
+                .ForMember(dest => dest.SenhaHash, opt => opt.Ignore())
+                .ForMember(dest => dest.DataCriacao, opt => opt.Ignore())
+                .ForMember(dest => dest.Id, opt => opt.Ignore());
+
+            // Mapeamento para atualização de usuário
+            CreateMap<UsuarioUpdateDto, Usuario>()
+                .ForMember(dest => dest.SenhaHash, opt => opt.Ignore())
+                .ForMember(dest => dest.DataCriacao, opt => opt.Ignore());
+
+            // Mapeamento para resposta
+            CreateMap<Usuario, UsuarioResponseDto>();
         }
     }
 }

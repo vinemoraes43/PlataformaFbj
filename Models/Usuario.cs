@@ -24,6 +24,8 @@ namespace PlataformaFbj.Models
         // Relacionamento 1:N com Feedback (um usuário tem muitos feedbacks)
         public ICollection<Feedback> Feedbacks { get; set; } = new HashSet<Feedback>();
 
+        public DateTime DataCriacao { get; set; }
+
         public int TentativasLogin { get; set; } = 0;
 
         public DateTime? UltimaTentativa { get; set; }
