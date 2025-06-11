@@ -25,6 +25,7 @@ namespace PlataformaFbj.Service
             {
                 new Claim(ClaimTypes.Name, usuario.Email),
                 new Claim(ClaimTypes.NameIdentifier, usuario.Id.ToString()),
+                new Claim(ClaimTypes.Role, usuario.Tipo.ToString()),
                 new Claim("Tipo", usuario.Tipo.ToString())
             };
 

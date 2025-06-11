@@ -4,6 +4,7 @@ using Microsoft.IdentityModel.Tokens;
 using PlataformaFbj.Data;
 using PlataformaFbj.Mapping;
 using PlataformaFbj.Service;
+using System.Security.Claims;
 using System.Text;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -32,7 +33,9 @@ builder.Services.AddAuthentication(x =>
         ValidateIssuerSigningKey = true,
         IssuerSigningKey = new SymmetricSecurityKey(key),
         ValidateIssuer = false,
-        ValidateAudience = false
+        ValidateAudience = false,
+        RoleClaimType = ClaimTypes.Role,
+        NameClaimType = ClaimTypes.NameIdentifier
     };
 });
 
@@ -41,6 +44,9 @@ builder.Services.AddAuthorization(options =>
     options.AddPolicy("Desenvolvedor", policy => policy.RequireClaim("Tipo", "Desenvolvedor"));
     options.AddPolicy("BetaTester", policy => policy.RequireClaim("Tipo", "BetaTester"));
     options.AddPolicy("Admin", policy => policy.RequireClaim("Tipo", "Admin"));
+
+    options.AddPolicy("DesenvolvedorOuAdmin", policy =>
+        policy.RequireRole("Admin", "Desenvolvedor"));
 });
 
 // SEÇÃO 3: CONFIGURAÇÃO DO BANCO DE DADOS
