@@ -1,11 +1,15 @@
+using PlataformaFbj.Dto.Feedbacks.Responses.Shared;
+
 namespace PlataformaFbj.Dto.Feedbacks.Responses
 {
     public class FeedbackResponseDto
     {
         public int Id { get; set; }
         public string Comentario { get; set; }
-        public int Avaliacao { get; set; }
-        public string Usuario { get; set; } // Nome do usuário que fez o feedback
         public DateTime DataCriacao { get; set; }
+        public DateTime? DataAtualizacao { get; set; }
+        public int Nota { get; set; }
+        public JogoSimpleDto Jogo { get; set; }
+        public UsuarioSimpleDto Usuario { get; set; }
     }
 }

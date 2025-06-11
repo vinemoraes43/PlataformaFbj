@@ -1,6 +1,9 @@
 using AutoMapper;
 using PlataformaFbj.Dto.Auth.Requests;
 using PlataformaFbj.Dto.Auth.Responses;
+using PlataformaFbj.Dto.Feedbacks.Requests;
+using PlataformaFbj.Dto.Feedbacks.Responses;
+using PlataformaFbj.Dto.Feedbacks.Responses.Shared;
 using PlataformaFbj.Dto.Jogos.Requests;
 using PlataformaFbj.Dto.Jogos.Responses;
 using PlataformaFbj.Dto.Usuarios.Requests;
@@ -67,6 +70,29 @@ namespace PlataformaFbj.Mapping
             // Mapeamento para mostrar detalhes do jogo
             CreateMap<Jogo, JogoDetalhesDto>()
                 .ForMember(dest => dest.Desenvolvedor, opt => opt.MapFrom(src => src.Desenvolvedor.Nome));
+
+            // Mapeamento de ControllerFeedback
+            // Mapeamento de Create DTO para Entidade
+            CreateMap<FeedbackCreateDto, Feedback>()
+                    .ForMember(dest => dest.DataPublicacao, opt => opt.MapFrom(_ => DateTime.UtcNow))
+                    .ForMember(dest => dest.DataAtualizacao, opt => opt.MapFrom(_ => DateTime.UtcNow));
+
+            // Mapeamento de Update DTO para Entidade
+            CreateMap<FeedbackUpdateDto, Feedback>()
+                .ForMember(dest => dest.DataAtualizacao, opt => opt.MapFrom(_ => DateTime.UtcNow))
+                .ForMember(dest => dest.DataPublicacao, opt => opt.Ignore())
+                .ForMember(dest => dest.JogoId, opt => opt.Ignore())
+                .ForMember(dest => dest.UsuarioId, opt => opt.Ignore());
+
+            // Mapeamento de Entidade para Response DTO
+            CreateMap<Feedback, FeedbackResponseDto>();
+
+            // Mapeamentos das entidades relacionadas
+            CreateMap<Jogo, JogoSimpleDto>()
+                .ForMember(dest => dest.Genero, opt => opt.MapFrom(src => src.Genero));
+
+            CreateMap<Usuario, UsuarioSimpleDto>()
+                .ForMember(dest => dest.Nome, opt => opt.MapFrom(src => $"{src.Nome}"));
         }
     }
 }
